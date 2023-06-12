@@ -1,3 +1,4 @@
+@import './dropdown.css';
 body, a, li, p, span, h1, h2, h3 {
     padding: 0;
     margin: 0;
@@ -88,12 +89,9 @@ h1 {
 
 
 .info {
-    max-width: 1200px;
-    padding: 60px 20px;
-    box-sizing: border-box;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 60px 20px;
     gap: 80px;
 }
 
@@ -128,4 +126,30 @@ h1 {
 
 .fot img { 
     padding: 5px;
+    cursor: pointer;
+}
+
+.menu_mobile {
+    display: none;
+}
+
+
+@media (max-width: 1200px) {
+    .topicos, .info{
+    grid-template-columns: 1fr;
+    }
+    .topicos img{
+    max-width: 90vw;
+    width: 700px;
+    margin: auto;
+    display: block;
+    }
+    .menu_mobile {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+    }
+    .menu {
+        display: none;
+    }
 }
